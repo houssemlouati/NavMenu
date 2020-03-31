@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Nav from "./Nav";
 
+const navcont = [
+  {
+    name: "Home",
+    ref: "http://www.gomycode.tn/"
+  },
+  {
+    name: "Services",
+    ref: "http://www.gomycode.tn/",
+    drop: [
+      {
+        name: "For entrepreneurs",
+        ref: "http://www.gomycode.tn/"
+      },
+      {
+        name: "For student",
+        ref: "http://www.gomycode.tn/"
+      },
+      {
+        name: "For hobbyists",
+        ref: "http://www.gomycode.tn/"
+      }
+    ]
+  },
+  {
+    name: "Contact",
+    ref: "http://www.gomycode.tn/"
+  }
+];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <u className="nav-list">
+      <Nav navcontent={navcont} />
+      </u>
     </div>
   );
 }

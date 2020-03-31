@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 18%;
+  padding-top: 100px;
+  padding-left: 0px;
+  margin-left: 200px;
+  border-bottom: 3px solid skyblue;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.items {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: lighter;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.items:hover {
+  color: skyblue;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown {
+  padding: 0px;
+  list-style: none;
+  margin-left: -30px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  border: 3px solid skyblue;
+  height: 120px;
+  width: 150px;
 }
-
-.App-link {
-  color: #61dafb;
+.dropdown-items {
+  text-decoration: none;
+  color: black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown {
+  position: absolute;
+  display: none;
+}
+.Servhover {
+  position: relative;
+}
+.Servhover:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.dropdown a:hover {
+  color: skyblue;
 }
